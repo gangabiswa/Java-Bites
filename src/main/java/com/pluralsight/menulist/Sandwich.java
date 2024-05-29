@@ -64,4 +64,6 @@ public class Sandwich {
         }
     }
 
+    public void add(Sandwich sandwich) {
+    }
 }
