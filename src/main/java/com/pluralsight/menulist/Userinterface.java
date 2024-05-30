@@ -86,6 +86,49 @@ public class Userinterface {
     }
 
     private static Drink createDrink(Scanner scanner) {
+        System.out.println("select drink type");
+        System.out.println("1) cocacola");
+        System.out.println("2) pepsi");
+        System.out.println("3) mango drink");
+        System.out.println(" enter your choice");
+        String Drinktype = "";
+
+        switch (scanner.nextInt()) {
+            case 1:
+                Drinktype = "cocacola";
+                break;
+            case 2:
+                Drinktype = "pepsi";
+            case 3:
+                Drinktype = "mango drink";
+                break;
+            default:
+                System.out.println("invalid choice defaulting to cocacola");
+                Drinktype = "cocacola";
+        }
+        scanner.nextLine();
+
+        System.out.println("Select drink size: ");
+        System.out.println("1) Small");
+        System.out.println("2) Medium");
+        System.out.println("3) Large");
+        System.out.print("Enter your choice: ");
+        String size = "";
+        switch (scanner.nextInt()) {
+            case 1:
+                size = "Small";
+                break;
+            case 2:
+                size = "Medium";
+                break;
+            case 3:
+                size = "Large";
+                break;
+            default:
+                System.out.println("Invalid choice. Defaulting to Medium.");
+                size = "Medium";
+        }
+
         return null;
     }
 
