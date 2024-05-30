@@ -3,17 +3,19 @@ package com.pluralsight.menulist;
 public class Meat extends Premium{
     private String name;
     private double price;
+    private boolean isExtra;
 
-    public Meat(String name, double price, String name1, double price1) {
+    public Meat(String name, double price) {
         super(name, price);
-        this.name = name1;
-        this.price = price1;
+        this.name = name;
+        this.price = price;
     }
 
     public Meat(String name, double price, boolean isExtra) {
         super(name, price, isExtra);
-        this.name = name1;
-        this.price = price1;
+        this.name = name;
+        this.price = price;
+        this.isExtra = isExtra;
     }
 
     @Override

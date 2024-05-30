@@ -20,7 +20,7 @@ public class Userinterface {
             System.out.println("0) Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -60,7 +60,7 @@ public class Userinterface {
     }
 
     private static Sandwich createSandwich(Scanner scanner) {
-        // Prompt for bread type
+
         System.out.println("Select bread type: ");
         System.out.println("1) White");
         System.out.println("2) Wheat");
@@ -85,9 +85,8 @@ public class Userinterface {
                 System.out.println("Invalid choice. Defaulting to White.");
                 breadType = "White";
         }
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
-        // Prompt for sandwich size
         System.out.println("Select sandwich size: ");
         System.out.println("1) Small");
         System.out.println("2) Medium");
@@ -108,13 +107,13 @@ public class Userinterface {
                 System.out.println("Invalid choice. Defaulting to Medium.");
                 size = "Medium";
         }
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
-        // Prompt for toasted option
+
         System.out.println("Do you want your sandwich toasted? (yes/no): ");
         boolean toasted = scanner.nextLine().equalsIgnoreCase("yes");
 
-        // Prompt for toppings
+
         List<ITopping> toppings = new ArrayList<>();
         boolean addMoreToppings;
         do {
@@ -124,7 +123,7 @@ public class Userinterface {
             System.out.println("3) Premium Topping (Cheese)");
             System.out.print("Enter your choice: ");
             int toppingType = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             ITopping topping = null;
             switch (toppingType) {
@@ -141,7 +140,7 @@ public class Userinterface {
                     System.out.println("9) Mushrooms");
                     System.out.print("Enter your choice: ");
                     int regularChoice = scanner.nextInt();
-                    scanner.nextLine(); // Consume newline
+                    scanner.nextLine();
 
                     String[] regularToppings = {"Lettuce", "Peppers", "Onions", "Tomatoes", "Jalapenos", "Cucumbers", "Pickles", "Guacamole", "Mushrooms"};
                     if (regularChoice >= 1 && regularChoice <= 9) {
@@ -161,7 +160,7 @@ public class Userinterface {
                     System.out.println("6) Bacon");
                     System.out.print("Enter your choice: ");
                     int meatChoice = scanner.nextInt();
-                    scanner.nextLine(); // Consume newline
+                    scanner.nextLine();
 
                     String[] meatToppings = {"Steak", "Ham", "Salami", "Roasted Beef", "Chicken", "Bacon"};
                     if (meatChoice >= 1 && meatChoice <= 6) {
@@ -181,7 +180,7 @@ public class Userinterface {
                     System.out.println("4) Swiss");
                     System.out.print("Enter your choice: ");
                     int cheeseChoice = scanner.nextInt();
-                    scanner.nextLine(); // Consume newline
+                    scanner.nextLine();
 
                     String[] cheeseToppings = {"American", "Provolone", "Cheddar", "Swiss"};
                     if (cheeseChoice >= 1 && cheeseChoice <= 4) {
@@ -205,7 +204,7 @@ public class Userinterface {
             addMoreToppings = scanner.nextLine().equalsIgnoreCase("yes");
         } while (addMoreToppings);
 
-        // Prompt for sauces
+
         boolean addMoreSauces;
         do {
             System.out.println("Select Sauce: ");
@@ -217,7 +216,7 @@ public class Userinterface {
             System.out.println("6) Vinaigrette");
             System.out.print("Enter your choice: ");
             int sauceChoice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             String[] sauces = {"Mayo", "Mustard", "Ranch", "Ketchup", "Thousand Islands", "Vinaigrette"};
             if (sauceChoice >= 1 && sauceChoice <= 6) {
@@ -230,10 +229,10 @@ public class Userinterface {
             addMoreSauces = scanner.nextLine().equalsIgnoreCase("yes");
         } while (addMoreSauces);
 
-        // Create sandwich
+
         Sandwich sandwich = new Sandwich(size, breadType, toasted, toppings);
 
-        // Display created sandwich details
+
         System.out.println("Your sandwich details:");
         System.out.println(sandwich);
 
@@ -251,9 +250,7 @@ public class Userinterface {
             }
 
             writer.write("Drinks:\n");
-            for (Drink drink : order.getDrinks()) {
-                writer.write(drink.getName() + " - $" + drink.getPrice()+ ;
-            }
+            for (Drink drink : order.getDrinks()) writer.write(drink.getName() + " - $" + drink.getPrice() );
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
