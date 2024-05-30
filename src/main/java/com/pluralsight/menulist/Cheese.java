@@ -10,6 +10,10 @@ public class Cheese extends Premium {
         this.price = price1;
     }
 
+    public Cheese(String cheeseTopping, double price, boolean isExtraCheese) {
+        super(cheeseTopping, price, isExtraCheese);
+    }
+
     @Override
     public String getName() {
         return name;

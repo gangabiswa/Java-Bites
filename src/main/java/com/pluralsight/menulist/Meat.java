@@ -10,7 +10,7 @@ public class Meat extends Premium{
         this.price = price1;
     }
 
-    public Meat(String name, double price, boolean isExtra, String name1, double price1) {
+    public Meat(String name, double price, boolean isExtra) {
         super(name, price, isExtra);
         this.name = name1;
         this.price = price1;
