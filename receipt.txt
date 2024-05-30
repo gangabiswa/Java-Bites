@@ -1,5 +1,5 @@
 Receipt
-Customer: Guest
+Customer: 
 Sandwiches:
 com.pluralsight.menulist.Sandwich@2f4d3709
 Drinks:

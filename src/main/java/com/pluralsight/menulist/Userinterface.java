@@ -3,6 +3,7 @@ package com.pluralsight.menulist;
 
 import com.pluralsight.ITopping;
 
+import javax.lang.model.element.Name;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,36 +28,65 @@ public class Userinterface {
                     createOrder(scanner);
                     break;
                 case 0:
-                    System.out.println("Exiting...");
+                    System.out.println("Exiting.");
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
         } while (choice != 0);
-
         scanner.close();
     }
-
     private static void createOrder(Scanner scanner) {
-        Customer customer = new Customer("Guest","4125568956");
+        Customer customer = new Customer("", "");
         List<Sandwich> sandwiches = new ArrayList<>();
         List<Drink> drinks = new ArrayList<>();
         List<Chips> chips = new ArrayList<>();
 
-        boolean addMoreSandwiches;
-        do {
-            Sandwich sandwich = createSandwich(scanner);
-            sandwiches.add(sandwich);
+        boolean addingItems = true;
+        while (addingItems) {
+            System.out.println("What would you like to add?");
+            System.out.println("1) Sandwich");
+            System.out.println("2) Drink");
+            System.out.println("3) Chips");
+            System.out.println("0) Finalize Order");
+            System.out.print("Enter your choice: ");
+            int itemType = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
 
-            System.out.print("Do you want to add another sandwich? (yes/no): ");
-            addMoreSandwiches = scanner.nextLine().equalsIgnoreCase("yes");
-        } while (addMoreSandwiches);
+            switch (itemType) {
+                case 1:
+                    Sandwich sandwich = createSandwich(scanner);
+                    sandwiches.add(sandwich);
+                    break;
+                case 2:
+                    Drink drink = createDrink(scanner);
+                    drinks.add(drink);
+                    break;
+                case 3:
+                    Chips chip = createChips(scanner);
+                    chips.add(chip);
+                    break;
+                case 0:
+                    addingItems = false;
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        }
 
         Order order = new Order(customer, sandwiches, drinks, chips);
         System.out.println("Order details:");
         System.out.println(order);
 
         writeReceiptToFile(order);
+    }
+
+    private static Chips createChips(Scanner scanner) {
+        return null;
+    }
+
+    private static Drink createDrink(Scanner scanner) {
+        return null;
     }
 
     private static Sandwich createSandwich(Scanner scanner) {
