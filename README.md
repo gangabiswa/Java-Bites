@@ -28,7 +28,7 @@ A console application called java-bites Ordering System is used to handle custom
 ### Running the Application in IntelliJ
 
 Follow these steps to get your application running within IntelliJ IDEA:
-
+![img_2.png](img_2.png)
 1. Open IntelliJ IDEA.
 2. Select "Open" and navigate to the directory where you cloned or downloaded the project.
 3. After the project opens, wait for IntelliJ to index the files and set up the project.
