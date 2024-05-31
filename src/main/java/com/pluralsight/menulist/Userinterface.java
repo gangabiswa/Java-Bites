@@ -51,7 +51,7 @@ public class Userinterface {
             System.out.println("0) Finalize Order");
             System.out.print("Enter your choice: ");
             int itemType = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             switch (itemType) {
                 case 1:

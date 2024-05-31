@@ -1,5 +1,5 @@
 Receipt
 Sandwiches:
-Sandwich{size='Medium', BreadType='White', toasted=false, Topping=[Regular{name='Onions'}, Regular{name='Mayo'}]}
+Sandwich{size='Medium', BreadType='Wheat', toasted=true, Topping=[Regular{name='Peppers'}, Premium{Name='Roasted Beef', price=1.5, isExtra=false}, Cheese{name='null', price=0.0}, Regular{name='Ranch'}]}
 Drinks:
-mango drink - $8.0
+mango drink - $4.0

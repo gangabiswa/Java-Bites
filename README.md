@@ -7,10 +7,10 @@ A console application called java-bites Ordering System is used to handle custom
 
 ## User Stories
 
--As a user, I want to input sandwich customization options (bread type, size, toppings, sauces), so that I can create a personalized sandwich.
--As a user, I want to select drinks and chips, so that I can complete my order.
--As a user, I want to generate a receipt with all order details and prices, so that I can have a record of my purchase.
--As a user, I want to add multiple sandwiches to my order, so that I can place a larger order at once.
+- As a user, I want to input sandwich customization options (bread type, size, toppings, sauces), so that I can create a personalized sandwich.
+- As a user, I want to select drinks and chips, so that I can complete my order.
+- As a user, I want to generate a receipt with all order details and prices, so that I can have a record of my purchase.
+- As a user, I want to add multiple sandwiches to my order, so that I can place a larger order at once.
 
 ## Setup
 
