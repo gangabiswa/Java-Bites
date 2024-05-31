@@ -113,23 +113,23 @@ public class Userinterface {
         System.out.println("2) Medium");
         System.out.println("3) Large");
         System.out.print("Enter your choice: ");
-        String size = "";
+        double size;
         switch (scanner.nextInt()) {
             case 1:
-                size = "Small";
+                size = 4.0;
                 break;
             case 2:
-                size = "Medium";
+                size = 8.0;
                 break;
             case 3:
-                size = "Large";
+                size = 12.0;
                 break;
             default:
                 System.out.println("Invalid choice. Defaulting to Medium.");
-                size = "Medium";
+                size = 8.0;
         }
-
-        return null;
+        Drink drink = new Drink(Drinktype, size);
+        return drink;
     }
 
     private static Sandwich createSandwich(Scanner scanner) {
