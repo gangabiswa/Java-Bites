@@ -2,8 +2,8 @@
 
 ## Description of the Project
 A console application called java-bites Ordering System is used to handle customer orders for sandwich shops.
-![Class Diagram](path/to/your/class_diagram.png)
-[20240531-0327-03.9671992.mp4](..%2F..%2FUsers%2FStudent%2FAppData%2FLocal%2FPackages%2FMicrosoft.ScreenSketch_8wekyb3d8bbwe%2FTempState%2FRecordings%2F20240531-0327-03.9671992.mp4)
+![Class Diagram](path/![img.png](img.png)to/your/class_diagram.png)
+![img_1.png](img_1.png)
 
 ## User Stories
 

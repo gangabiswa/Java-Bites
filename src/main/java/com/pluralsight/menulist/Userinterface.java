@@ -82,7 +82,28 @@ public class Userinterface {
     }
 
     private static Chips createChips(Scanner scanner) {
-        return null;
+        System.out.println("select chips");
+        System.out.println("1) potato chips");
+        System.out.println("2) bbq lays");
+        System.out.println("3 tortilla chips");
+        String chipType ="";
+        switch (scanner.nextInt()){
+            case 1:
+                chipType = "potato chips";
+                break;
+            case 2:
+                chipType = "bbq lays";
+                break;
+            case 3:
+                chipType = "tortilla chips";
+                break;
+            default:
+                System.out.println("invalid. defaulting to bbq lays");
+                chipType = "bbq lays";
+        }
+        scanner.nextLine();
+        Chips chips = new Chips(chipType);
+        return chips;
     }
 
     private static Drink createDrink(Scanner scanner) {

@@ -1,6 +1,6 @@
 Receipt
 Customer: 
 Sandwiches:
-com.pluralsight.menulist.Sandwich@34a245ab
+com.pluralsight.menulist.Sandwich@4e50df2e
 Drinks:
-mango drink - $8.0
+mango drink - $4.0
