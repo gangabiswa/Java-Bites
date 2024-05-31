@@ -36,4 +36,13 @@ public abstract class Premium implements ITopping {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Premium{" +
+                "Name='" + Name + '\'' +
+                ", price=" + price +
+                ", isExtra=" + isExtra +
+                '}';
+    }
 }

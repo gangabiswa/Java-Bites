@@ -66,4 +66,14 @@ public class Sandwich {
 
     public void add(Sandwich sandwich) {
     }
+
+    @Override
+    public String toString() {
+        return "Sandwich{" +
+                "size='" + size + '\'' +
+                ", BreadType='" + BreadType + '\'' +
+                ", toasted=" + toasted +
+                ", Topping=" + Topping +
+                '}';
+    }
 }

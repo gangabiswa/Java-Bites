@@ -28,4 +28,12 @@ public class Chips {
     public void display(){
         System.out.println(getName()+"chips");
     }
+
+    @Override
+    public String toString() {
+        return "Chips{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

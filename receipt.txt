@@ -1,6 +1,5 @@
 Receipt
-Customer: 
 Sandwiches:
-com.pluralsight.menulist.Sandwich@4e50df2e
+Sandwich{size='Medium', BreadType='White', toasted=false, Topping=[Regular{name='Onions'}, Regular{name='Mayo'}]}
 Drinks:
-mango drink - $4.0
+mango drink - $8.0

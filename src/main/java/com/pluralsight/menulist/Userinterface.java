@@ -74,9 +74,9 @@ public class Userinterface {
             }
         }
 
-        Order order = new Order(customer, sandwiches, drinks, chips);
+        Order order = new Order( sandwiches, drinks, chips);
         System.out.println("Order details:");
-        System.out.println(order);
+        System.out.println(order.toString());
 
         writeReceiptToFile(order);
     }
@@ -327,8 +327,8 @@ public class Userinterface {
         Sandwich sandwich = new Sandwich(size, breadType, toasted, toppings);
 
 
-        System.out.println("Your sandwich details:");
-        System.out.println(sandwich);
+    System.out.println("Your sandwich details:");
+        System.out.println(sandwich.getBreadType() + " " + sandwich.getTopping() + " " +sandwich.getSize());
 
         return sandwich;
     }
@@ -336,7 +336,6 @@ public class Userinterface {
     private static void writeReceiptToFile(Order order) {
         try (FileWriter writer = new FileWriter("receipt.txt")) {
             writer.write("Receipt\n");
-            writer.write("Customer: " + order.getCustomer().getName() + "\n");
             writer.write("Sandwiches:\n");
 
             for (Sandwich sandwich : order.getSandwich()) {

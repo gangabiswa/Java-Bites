@@ -57,4 +57,12 @@ public class Cheese extends Premium {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Cheese{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

@@ -18,4 +18,11 @@ public class Regular implements ITopping {
     public double getPrice(String size) {
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return "Regular{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
